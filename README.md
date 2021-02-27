@@ -1,6 +1,6 @@
 # Configuration
 
-My `.dotfiles`.
+My `.dotfiles`. Deploy with `cat deploy.sh | sh`
 
 ## zsh Installation
 
