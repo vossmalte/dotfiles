@@ -122,4 +122,5 @@ fi
 
 # user's bin
 path+=($HOME'/bin')
+path+=($HOME'/.local/bin')
 export PATH
