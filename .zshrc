@@ -73,14 +73,14 @@ ZSH_THEME="robbyrussell"
 # https://github.com/MichaelAquilina/zsh-you-should-use
 # https://github.com/zsh-users/zsh-autosuggestions
 plugins=(
-	git
-       	colored-man-pages
-	common-aliases
-       	pip
-	ubuntu
-	vscode
-	zsh-autosuggestions
-	you-should-use
+    git
+    colored-man-pages
+    common-aliases
+    pip
+    ubuntu
+    vscode
+    zsh-autosuggestions
+    you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,6 +115,11 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
 # on WSL set DISPLAY
-export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
-export LIBGL_ALWAYS_INDIRECT=1
+if grep -qEi "microsoft" /proc/version &> /dev/null ; then
+    export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+    export LIBGL_ALWAYS_INDIRECT=1
+fi
 
+# user's bin
+path+=($HOME'/bin')
+export PATH
