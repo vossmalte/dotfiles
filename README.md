@@ -22,6 +22,7 @@ Then get some zsh-plugins from Github and clone in `~/.oh-my-zsh/custom/plugins`
 
 ~~~{.shell}
 sudo apt-get install pandoc
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py; python3 get-pip.py
 ~~~
 
 - [TinyTeX](https://yihui.org/tinytex)
