@@ -2,6 +2,9 @@
 
 for f in $(ls -A | egrep '^\.')
 do 
-    echo "Copying $f"
-    cp -r $f ~/
+    if ! [ "$f" -ef ".git" ]
+    then
+        echo "Copying $f"
+        cp -r $f ~/
+    fi
 done
