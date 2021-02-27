@@ -1,8 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+path+=($HOME'/bin')
+path+=($HOME'/.local/bin')
+export PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/malte/.oh-my-zsh"
+export ZSH=$HOME"/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -119,8 +121,3 @@ if grep -qEi "microsoft" /proc/version &> /dev/null ; then
     export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
     export LIBGL_ALWAYS_INDIRECT=1
 fi
-
-# user's bin
-path+=($HOME'/bin')
-path+=($HOME'/.local/bin')
-export PATH
