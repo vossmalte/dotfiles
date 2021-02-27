@@ -2,7 +2,7 @@
 
 My `.dotfiles`.
 
-## Installation
+## zsh Installation
 
 ~~~{.shell}
 sudo apt-get update
@@ -17,6 +17,18 @@ Then get some zsh-plugins from Github and clone in `~/.oh-my-zsh/custom/plugins`
 
 - <https://github.com/zsh-users/zsh-autosuggestions>
 - <https://github.com/MichaelAquilina/zsh-you-should-use>
+
+## Important software
+
+~~~{.shell}
+sudo apt-get install pandoc
+~~~
+
+- [TinyTeX](https://yihui.org/tinytex)
+  - `wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh`
+  - missing packages for Eisvogel:
+      `tlmgr --usermode install koma-script` and [these](tinytex-pkg.txt)
+- [Eisvogel Pandoc Template](https://github.com/Wandmalfarbe/pandoc-latex-template/releases)
 
 ## WSL - Windows Subsystem for Linux
 
