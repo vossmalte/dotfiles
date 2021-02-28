@@ -5,6 +5,7 @@ atbegshi
 atveryend
 auxhook
 babel
+babel-english
 babel-german
 beamer
 beamertheme-metropolis
@@ -45,6 +46,7 @@ graphics
 graphics-cfg
 graphics-def
 grffile
+grfext
 helvetic
 hycolor
 hyperref
@@ -98,6 +100,7 @@ modes
 ms
 natbib
 needspace
+pagecolor
 pdfescape
 pdftex
 pdftex.x86_64-linux
