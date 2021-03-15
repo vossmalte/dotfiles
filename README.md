@@ -28,7 +28,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py; python3 get-pip.py
 - [TinyTeX](https://yihui.org/tinytex)
   - `wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh`
   - missing packages for Eisvogel:
-      `tlmgr --usermode install koma-script` and [these](tinytex-pkg.txt)
+      `tlmgr install koma-script` and [these](tinytex-pkg.txt)
 - [Eisvogel Pandoc Template](https://github.com/Wandmalfarbe/pandoc-latex-template/releases)
 
 ## WSL - Windows Subsystem for Linux
