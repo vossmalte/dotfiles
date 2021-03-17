@@ -78,6 +78,7 @@ plugins=(
     git
     colored-man-pages
     common-aliases
+    command-not-found
     pip
     ubuntu
     vscode
