@@ -90,6 +90,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# stores personal information like access tokens
+source $HOME/.zshrc_profile
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -122,3 +125,4 @@ if grep -qEi "microsoft" /proc/version &> /dev/null ; then
     export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
     export LIBGL_ALWAYS_INDIRECT=1
 fi
+
