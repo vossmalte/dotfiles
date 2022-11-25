@@ -1,8 +1,7 @@
 # Warning: This config does not include keys that have an unset value
-
 # $all is shorthand for $username$hostname$localip$shlvl$singularity$kubernetes$directory$vcsh$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$docker_context$package$bun$c$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$golang$haskell$helm$java$julia$kotlin$lua$nim$nodejs$ocaml$perl$php$pulumi$purescript$python$raku$rlang$red$ruby$rust$scala$swift$terraform$vlang$vagrant$zig$buf$nix_shell$conda$spack$memory_usage$aws$gcloud$openstack$azure$env_var$crystal$custom$sudo$cmd_duration$line_break$jobs$battery$time$status$container$shell$character
 "$schema" = 'https://starship.rs/config-schema.json'
-format = '[](#9A348E)$username[](bg:#DA627D fg:#9A348E)$directory[](fg:#DA627D bg:#FCA17D)$git_branch$git_status[](fg:#FCA17D bg:#86BBD8)$c$elixir$elm$golang$haskell$java$julia$nodejs$nim$rust[](fg:#86BBD8 bg:#06969A)$memory_usage[](fg:#06969A bg:#33658A)$time[](fg:#33658A)'
+format = '[](#9A348E)${custom.apple}(#9A348E)$username[](bg:#DA627D fg:#9A348E)$directory[](fg:#DA627D bg:#FCA17D)$git_branch$git_status[](fg:#FCA17D bg:#86BBD8)$c$elixir$elm$golang$haskell$java$julia$nodejs$nim$rust[](fg:#86BBD8 bg:#06969A)$memory_usage[](fg:#06969A bg:#33658A)$time[](fg:#33658A)$line_break$character'
 right_format = ''
 continuation_prompt = '[∙](bright-black) '
 scan_timeout = 30
@@ -886,7 +885,7 @@ time_range = '-'
 format = '[$user ]($style)'
 style_root = 'bg:#9A348E'
 style_user = 'bg:#9A348E'
-show_always = true
+show_always = false
 disabled = false
 
 [vagrant]
@@ -928,3 +927,9 @@ disabled = false
 detect_extensions = ['zig']
 detect_files = []
 detect_folders = []
+
+[custom.apple]
+symbol = ' '
+style = 'bg:#9A348E'
+when = true
+
