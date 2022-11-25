@@ -2,6 +2,14 @@
 
 My `.dotfiles`. Deploy with `cat deploy.sh | sh`
 
+## fish Installation
+
+~~~{.shell}
+brew install fish
+brew install starship
+# use starship config from this repo
+~~~
+
 ## zsh Installation
 
 ~~~{.shell}
@@ -20,16 +28,17 @@ Then get some zsh-plugins from Github and clone in `~/.oh-my-zsh/custom/plugins`
 
 ## Important software
 
-~~~{.shell}
-sudo apt-get install pandoc
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py; python3 get-pip.py
-~~~
+- [n](https://github.com/tj/n)
+- neovim: `brew install neovim`
+- [AstroNvim](https://astronvim.github.io/)
+- [kitty](https://sw.kovidgoyal.net/kitty/) `brew install kitty`
 
 - [TinyTeX](https://yihui.org/tinytex)
   - `wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh`
   - missing packages for Eisvogel:
       `tlmgr install koma-script` and [these](tinytex-pkg.txt)
 - [Eisvogel Pandoc Template](https://github.com/Wandmalfarbe/pandoc-latex-template/releases)
+- pandoc: `brew install pandoc`
 
 ## WSL - Windows Subsystem for Linux
 
