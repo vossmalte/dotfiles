@@ -1,0 +1,7 @@
+# do not sync state
+lazygit/state.yml
+
+# Neovim Config: AstroNvim
+nvim
+
+
