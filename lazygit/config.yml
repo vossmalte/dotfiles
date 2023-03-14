@@ -1,0 +1,8 @@
+customCommands:
+  - key: 'G'
+    command: 'gitmoji -c'
+    context: 'files'
+    subprocess: yes
+    description: 'Commit with gitmoji'
+    stream: yes
+    showOutput: yes

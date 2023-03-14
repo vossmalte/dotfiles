@@ -1,10 +1,6 @@
 [user]
-	name = Malte Voß
+	name = Malte Voss
 	email = 22179782+vossmalte@users.noreply.github.com
-	signingkey = 3F58903A75268DD3
-[pull]
-	rebase = true
+	signingkey = 4B5392D6152BBFED
 [commit]
 	gpgsign = true
-[core]
-	editor = vim
