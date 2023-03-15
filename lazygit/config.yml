@@ -1,3 +1,8 @@
+os:
+  editCommand: 'nvr'
+  editCommandTemplate: "{{editor}} -l {{filename}} +{{line}}"
+gui:
+  showIcons: true
 customCommands:
   - key: 'G'
     command: 'gitmoji -c'
