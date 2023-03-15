@@ -63,6 +63,7 @@ return {
           },
         },
         window = {
+          position = "right",
           width = 30,
           mappings = {
             ["<space>"] = false, -- disable space until we figure out which-key disabling
@@ -79,6 +80,9 @@ return {
           hijack_netrw_behavior = "open_current",
           use_libuv_file_watcher = true,
           commands = global_commands,
+          filtered_items = {
+            visible = true,
+          },
         },
         buffers = { commands = global_commands },
         git_status = { commands = global_commands },
