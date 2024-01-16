@@ -1,8 +1,13 @@
 os:
   editCommand: 'nvr'
   editCommandTemplate: "{{editor}} -l {{filename}} +{{line}}"
+  # escape slash when opening links
+  # https://github.com/jesseduffield/lazygit/issues/3064
+  openLink: echo "{{link}}"; open "$(echo "{{link}}" | sed 's/%2F/\//g')"
 gui:
   showIcons: true
+services:
+  'git.eon-cds.de': 'gitlab:git.eon-cds.de'
 customCommands:
   - key: 'G'
     command: 'gitmoji -c'
