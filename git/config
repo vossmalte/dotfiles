@@ -1,7 +1,7 @@
 [user]
 	name = Malte Voss
 	email = 22179782+vossmalte@users.noreply.github.com
-	signingkey = 4B5392D6152BBFED
+	signingKey = 4B5392D6152BBFED
 [commit]
 	gpgsign = true
 [core]
