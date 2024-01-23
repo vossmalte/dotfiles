@@ -1,18 +1,25 @@
 os:
-  editCommand: 'nvr'
-  editCommandTemplate: "{{editor}} -l {{filename}} +{{line}}"
+  edit: "nvr -l {{filename}}"
+  editAtLine: "nvr -l {{filename}} +{{line}}"
   # escape slash when opening links
   # https://github.com/jesseduffield/lazygit/issues/3064
   openLink: echo "{{link}}"; open "$(echo "{{link}}" | sed 's/%2F/\//g')"
 gui:
-  showIcons: true
+  nerdFontsVersion: 3
 services:
-  'git.eon-cds.de': 'gitlab:git.eon-cds.de'
+  "git.eon-cds.de": "gitlab:git.eon-cds.de"
+git:
+  mainBranches: [master, main, develop]
+  parseEmoji: true
 customCommands:
-  - key: 'G'
-    command: 'gitmoji -c'
-    context: 'files'
+  - key: "G"
+    description: "Commit with gitmoji"
+    # suggest the scope by looking at the branch
+    command: 'gitmoji -c --scope $(echo {{.SelectedLocalBranch.Name | quote}} | sed -E "s/.*(SMEXNET-[0-9]*).*/\1/")'
+    context: "files"
     subprocess: yes
-    description: 'Commit with gitmoji'
-    stream: yes
-    showOutput: yes
+  - key: "i"
+    description: "Show pipeline status"
+    context: "localBranches"
+    command: "glab ci status --branch {{.SelectedLocalBranch.Name | quote}}"
+    subprocess: yes
