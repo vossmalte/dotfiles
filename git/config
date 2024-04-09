@@ -1,8 +1,11 @@
 [user]
-	name = Malte Voss
+	name = Malte Breitzmann
 	email = 22179782+vossmalte@users.noreply.github.com
-	signingKey = 4B5392D6152BBFED
+	signingKey = DB4F952EE655165E
 [commit]
-	gpgsign = true
+	gpgSign = true
 [core]
 	editor = nvim
+[includeIf "gitdir:~/repos/work/"]
+	# .gitignore'd for privacy reasons
+	path = work.inc
