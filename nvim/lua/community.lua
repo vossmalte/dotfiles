@@ -15,5 +15,6 @@ return {
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.colorscheme.everforest" },
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  { import = "astrocommunity.workflow.hardtime-nvim" },
   -- import/override with your plugins folder
 }
