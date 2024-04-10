@@ -68,6 +68,12 @@ return {
           function() require("telescope.builtin").find_files { hidden = true } end,
           desc = "Find files",
         },
+        ["<Leader>le"] = {
+          function()
+            if vim.fn.exists ":EslintFixAll" > 0 then vim.cmd.EslintFixAll() else vim.notify("eslint is currently not available") end
+          end,
+          desc = "eslint --fix",
+        },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
