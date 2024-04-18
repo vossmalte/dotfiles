@@ -1,30 +1,16 @@
 # Configuration
 
-My `.dotfiles`. Deploy with `cat deploy.sh | sh`
+This repository should be your `~/.config`.
 
 ## fish Installation
 
-~~~{.shell}
+```{.shell}
 brew install fish
+chsh -s $(which fish)
+fish
 brew install starship
 # use starship config from this repo
-~~~
-
-## zsh Installation
-
-~~~{.shell}
-sudo apt-get update
-sudo apt-get install zsh
-# oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# starship
-curl -fsSL https://starship.rs/install.sh | bash
-~~~
-
-Then get some zsh-plugins from Github and clone in `~/.oh-my-zsh/custom/plugins`:
-
-- <https://github.com/zsh-users/zsh-autosuggestions>
-- <https://github.com/MichaelAquilina/zsh-you-should-use>
+```
 
 ## Important software
 
@@ -36,17 +22,19 @@ Then get some zsh-plugins from Github and clone in `~/.oh-my-zsh/custom/plugins`
 - [TinyTeX](https://yihui.org/tinytex)
   - `wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh`
   - missing packages for Eisvogel:
-      `tlmgr install koma-script` and [these](tinytex-pkg.txt)
+    `tlmgr install koma-script` and [these](tinytex-pkg.txt)
 - [Eisvogel Pandoc Template](https://github.com/Wandmalfarbe/pandoc-latex-template/releases)
 - pandoc: `brew install pandoc`
 
 ## WSL - Windows Subsystem for Linux
 
+WSL is awesome, vscode also has a nice integration for WSL. Your repository can live in Linux and your VS Code will run natively in Windows.
+
 ### Fix font
 
-Install a font from <https://www.nerdfonts.com> and select it in the settings of Windows Terminal:
+Use Windows Terminal so you have tabs and stuff. Install a font from <https://www.nerdfonts.com> and select it in the settings of Windows Terminal:
 
-~~~{.json}
+```{.json}
 {
                 "guid": "{07b52e3e-de2c-5db4-bd2d-asdf}",
                 "hidden": false,
@@ -56,8 +44,8 @@ Install a font from <https://www.nerdfonts.com> and select it in the settings of
                 "bellStyle": "none",
                 "startingDirectory": "\\\\wsl$\\Ubuntu-20.04\\home\\malte"
             }
-~~~
+```
 
 ### XServer
 
-Install [vcxsrv](https://skeptric.com/wsl2-xserver/).
+Want to run a graphical program from WSL? Install [vcxsrv](https://skeptric.com/wsl2-xserver/).
