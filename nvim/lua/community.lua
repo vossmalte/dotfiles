@@ -15,5 +15,6 @@ return {
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.colorscheme.everforest" },
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- import/override with your plugins folder
 }
