@@ -10,7 +10,6 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
-  { import = "astrocommunity.media.image-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.colorscheme.everforest" },
