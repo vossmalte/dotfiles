@@ -1,7 +1,9 @@
 [user]
 	name = Malte Breitzmann
 	email = 22179782+vossmalte@users.noreply.github.com
-	signingKey = DB4F952EE655165E
+	signingKey = ~/.ssh/github.pub
+[gpg]
+  format = ssh
 [commit]
 	gpgSign = true
 [core]
