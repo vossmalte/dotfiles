@@ -5,21 +5,50 @@ os:
   # https://github.com/jesseduffield/lazygit/issues/3064
   openLink: echo "{{link}}"; open "$(echo "{{link}}" | sed 's/%2F/\//g')"
 gui:
-  nerdFontsVersion: 3
+  nerdFontsVersion: "3"
 services:
   "git.eon-cds.de": "gitlab:git.eon-cds.de"
 git:
   mainBranches: [master, main, develop]
+  overrideGpg: true
   parseEmoji: true
 customCommands:
   - key: "G"
     description: "Commit with gitmoji"
     # suggest the scope by looking at the branch
-    command: 'gitmoji -c --scope $(echo {{.SelectedLocalBranch.Name | quote}} | sed -E "s/.*(SMEXNET-[0-9]*).*/\1/")'
+    command: 'gitmoji -c --scope $(echo {{.SelectedLocalBranch.Name | quote}} | sed -E "s/.*([A-Z]{3,7}-[0-9]+).*/\1/")'
     context: "files"
-    subprocess: yes
+    subprocess: true
   - key: "i"
     description: "Show pipeline status"
     context: "localBranches"
     command: "glab ci status --branch {{.SelectedLocalBranch.Name | quote}}"
-    subprocess: yes
+    subprocess: true
+  - command: "git commit -m '{{ if .Form.scope }}{{ .Form.scope }}{{ if .Form.jira }}({{ .Form.jira }}){{ end }}:{{ end }} {{ .Form.emoji }} {{ .Form.message }}'"
+    context: files
+    stream: true
+    loadingText: Commiting...
+    description: Convential Commit using gitmojis
+    key: C
+    prompts:
+      - command: gitmoji -l
+        filter: ^(.*?) - (:.*?:) - (.*)$
+        key: emoji
+        labelFormat: "{{ .group_1 }} - {{ .group_3 }}"
+        title: "Choose a gitmoji: "
+        type: menuFromCommand
+        valueFormat: "{{ .group_1 }}"
+      - key: scope
+        title: "Enter the scope of current changes: "
+        type: menuFromCommand
+        command: 'printf "%s\\n" feat fix docs style refactor perf test chore build ci revert merge'
+      - key: message
+        title: "Enter the commit title: "
+        type: input
+      - key: jira
+        title: "Enter the jira ticket: "
+        type: menuFromCommand
+        # command: "bash -c \"git branch -l | xargs printf '%s\\\\n' {{.SelectedLocalBranch.Name | quote}} 'chore/SMEXNET-000' | uniq\""
+        # filter: '.*(SMEXNET-[0-9]+).*'
+        # valueFormat: '{{ .group_1 }}'
+        command: "bash -c \"git branch -l | xargs printf '%s\\\\n' {{.SelectedLocalBranch.Name | quote}} 'chore/SMEXNET-000' | sed -n -E -H 's/^.*\\\\W([A-Z]{3,7}-[0-9]+).*$/\\\\1/p' | uniq\""
