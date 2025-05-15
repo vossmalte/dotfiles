@@ -54,20 +54,11 @@ return {
           function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
           desc = "Previous buffer",
         },
-
-        ["]e"] = {
-          function() vim.diagnostic.goto_next { severity = vim.diagnostic.severity.ERROR } end,
-          desc = "Next Error",
-        },
-        ["[e"] = {
-          function() vim.diagnostic.goto_prev { severity = vim.diagnostic.severity.ERROR } end,
-          desc = "Previous Error",
-        },
-        ["<Leader><Leader>"] = { "<cmd>Telescope resume<cr>", desc = "Open last Telescope" },
-        ["<Leader>ff"] = {
-          function() require("telescope.builtin").find_files { hidden = true } end,
-          desc = "Find files",
-        },
+        ["<Leader><Leader>"] = { function() Snacks.picker.resume() end, desc = "Open last Telescope" },
+        -- ["<Leader>ff"] = {
+        --   function() require("telescope.builtin").find_files { hidden = true } end,
+        --   desc = "Find files",
+        -- },
         ["<Leader>le"] = {
           function()
             if vim.fn.exists ":EslintFixAll" > 0 then vim.cmd.EslintFixAll() else vim.notify("eslint is currently not available") end
