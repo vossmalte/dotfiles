@@ -1,0 +1,27 @@
+{
+  "plugin": [
+    "oh-my-opencode",
+  ],
+  "provider": {},
+  "mcp": {
+    "sonarqube": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "SONARQUBE_URL",
+        "-e",
+        "SONARQUBE_TOKEN",
+        "mcp/sonarqube"
+      ],
+      "environment": {
+        "SONARQUBE_URL": "{env:SONAR_HOST_URL}",
+        "SONARQUBE_TOKEN": "{env:SONAR_TOKEN}"
+      }
+    }
+  },
+  "$schema": "https://opencode.ai/config.json"
+}
