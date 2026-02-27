@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 os:
   edit: "nvr -l {{filename}}"
   editAtLine: "nvr -l {{filename}} +{{line}}"
@@ -18,15 +19,14 @@ customCommands:
     # suggest the scope by looking at the branch
     command: 'gitmoji -c --scope $(echo {{.SelectedLocalBranch.Name | quote}} | sed -E "s/.*([A-Z]{3,7}-[0-9]+).*/\1/")'
     context: "files"
-    subprocess: true
+    output: terminal
   - key: "i"
     description: "Show pipeline status"
     context: "localBranches"
     command: "glab ci status --branch {{.SelectedLocalBranch.Name | quote}}"
-    subprocess: true
+    output: terminal
   - command: "git commit -m '{{ if .Form.scope }}{{ .Form.scope }}{{ if .Form.jira }}({{ .Form.jira }}){{ end }}:{{ end }} {{ .Form.emoji }} {{ .Form.message }}'"
     context: files
-    stream: true
     loadingText: Commiting...
     description: Convential Commit using gitmojis
     key: C
@@ -52,3 +52,4 @@ customCommands:
         # filter: '.*(SMEXNET-[0-9]+).*'
         # valueFormat: '{{ .group_1 }}'
         command: "bash -c \"git branch -l | xargs printf '%s\\\\n' {{.SelectedLocalBranch.Name | quote}} 'chore/SMEXNET-000' | sed -n -E -H 's/^.*\\\\W([A-Z]{3,7}-[0-9]+).*$/\\\\1/p' | uniq\""
+    output: log
