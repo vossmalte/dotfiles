@@ -43,5 +43,34 @@
     "document-writer": {
       "model": "github-copilot/gpt-5-mini"
     }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "github-copilot/gpt-4o",
+      "variant": "high"
+    },
+    "ultrabrain": {
+      "model": "github-copilot/claude-opus-4.5",
+      "variant": "high"
+    },
+    "artistry": {
+      "model": "github-copilot/gpt-4o",
+      "variant": "high"
+    },
+    "quick": {
+      "model": "github-copilot/gpt-4o-mini"
+    },
+    "unspecified-low": {
+      "model": "github-copilot/claude-sonnet-4.5"
+    },
+    "unspecified-high": {
+      "model": "github-copilot/claude-opus-4.5"
+    },
+    "writing": {
+      "model": "github-copilot/gpt-4o-mini"
+    },
+    "deep": {
+      "model": "github-copilot/claude-sonnet-4.5"
+    }
   }
 }
