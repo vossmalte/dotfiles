@@ -58,7 +58,7 @@
       "variant": "high"
     },
     "quick": {
-      "model": "github-copilot/gpt-4o-mini"
+      "model": "github-copilot/gpt-5-mini"
     },
     "unspecified-low": {
       "model": "github-copilot/claude-sonnet-4.5"
@@ -67,7 +67,7 @@
       "model": "github-copilot/claude-opus-4.5"
     },
     "writing": {
-      "model": "github-copilot/gpt-4o-mini"
+      "model": "github-copilot/gpt-5-mini"
     },
     "deep": {
       "model": "github-copilot/claude-sonnet-4.5"
