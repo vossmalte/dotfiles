@@ -1,0 +1,68 @@
+"" Source your .vimrc
+source ~/.vimrc
+let mapleader=" "
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+set wrap
+
+" Do incremental searching.
+set incsearch
+
+" relative line numbers
+set rnu
+
+" use clipboard
+set clipboard=unnamed,ideaput
+
+" Plugins
+set which-key
+set notimeout " don't vanish the which-key
+Plug 'tpope/vim-commentary'
+Plug 'jdhao/better-escape.vim'
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+" IJ provides IdeaVim: track action IDs command to show the id of the executed actions. This command can be found in "Search everywhere" (double shift).
+" or find in :actionlist search
+map <leader>lf <Action>(ReformatCode)
+map <leader>lr <Action>(RenameElement)
+map <leader>ff <Action>(SearchEverywhere)
+map grr <Action>(GotoDeclaration)
+map grR <Action>(FindUsages)
+map <leader>c <Action>(CloseContent)
+map <leader>bp <Action>(GoToLastTab)
+map <leader>bf <Action>(Switcher)
+map <leader>fb <Action>(Switcher)
+map <leader>gl <Action>(Annotate)
+map <leader>gr <Action>(Vcs.RollbackChangedLines)
+map <leader>gR <Action>(ChangesView.Revert)
+map [g <Action>(VcsShowPrevChangeMarker)
+map ]g <Action>(VcsShowNextChangeMarker)
+map <leader>gp <Action>(VcsShowCurrentChangeMarker)
+map ]e <Action>(GotoNextError)
+map [e <Action>(GotoPreviousError)
+map ]r <Action>(GotoNextElementUnderCaretUsage)
+map [r <Action>(GotoPrevElementUnderCaretUsage)
+map <leader>ld <Action>(ShowErrorDescription)
+map <leader>la <Action>(ShowIntentionActions)
+map L <Action>(NextTab)
+map H <Action>(PreviousTab)
+map <leader>o <Action>(SelectInProjectView)
+map <leader>e <Action>(ToggleDistractionFreeMode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
