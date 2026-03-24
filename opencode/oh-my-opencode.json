@@ -8,7 +8,7 @@
       "model": "github-copilot/gpt-5.2"
     },
     "prometheus": {
-      "model": "github-copilot/gemini-3.1-pro-preview"
+      "model": "github-copilot/claude-opus-4.6"
     },
     "build": {
       "model": "github-copilot/claude-sonnet-4.6"
