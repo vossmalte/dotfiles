@@ -11,7 +11,7 @@ return {
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.kotlin" },
   -- { import = "astrocommunity.pack.haskell" },
-  { import = "astrocommunity.programming-language-support/rest-nvim" },
+  -- { import = "astrocommunity.programming-language-support/rest-nvim" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
