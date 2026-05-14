@@ -1,0 +1,5 @@
+# this file is a global .gitignore
+.idea/
+.sisyphus/
+.node_modules/
+.playwright-mcp/

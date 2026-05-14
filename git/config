@@ -10,4 +10,4 @@
 	editor = nvim
 [includeIf "gitdir:~/repos/work/"]
 	# .gitignore'd for privacy reasons
-	path = work.inc
+	path = work.toml
