@@ -5,7 +5,7 @@
       "model": "github-copilot/claude-opus-4.6"
     },
     "oracle": {
-      "model": "github-copilot/gpt-5.2"
+      "model": "github-copilot/gpt-5.5"
     },
     "prometheus": {
       "model": "github-copilot/claude-opus-4.6"
@@ -17,7 +17,7 @@
       "model": "github-copilot/claude-sonnet-4.6"
     },
     "sisyphus-junior": {
-      "model": "github-copilot/gpt-5.1-codex"
+      "model": "github-copilot/gpt-5.3-codex"
     },
     "OpenCode-Builder": {
       "model": "github-copilot/claude-sonnet-4.6"
@@ -26,7 +26,7 @@
       "model": "github-copilot/claude-sonnet-4.5"
     },
     "momus": {
-      "model": "github-copilot/gpt-5.1"
+      "model": "github-copilot/gpt-5.4"
     },
     "explore": {
       "model": "github-copilot/gemini-3-flash-preview"
@@ -50,7 +50,7 @@
       "variant": "high"
     },
     "ultrabrain": {
-      "model": "github-copilot/claude-opus-4.5",
+      "model": "github-copilot/claude-opus-4.6",
       "variant": "high"
     },
     "artistry": {
@@ -64,7 +64,7 @@
       "model": "github-copilot/claude-sonnet-4.5"
     },
     "unspecified-high": {
-      "model": "github-copilot/claude-opus-4.5"
+      "model": "github-copilot/claude-opus-4.6"
     },
     "writing": {
       "model": "github-copilot/gpt-5-mini"
