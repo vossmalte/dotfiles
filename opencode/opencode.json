@@ -3,6 +3,7 @@
     "oh-my-openagent@latest"
   ],
   "provider": {},
+  "disabled_providers": ["opencode"],
   "mcp": {
     "sonarqube": {
       "type": "local",
