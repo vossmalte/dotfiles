@@ -8,6 +8,8 @@
 	gpgSign = true
 [core]
 	editor = nvim
+[rebase]
+	updateRefs = true
 [includeIf "gitdir:~/repos/work/"]
 	# .gitignore'd for privacy reasons
 	path = work.toml
