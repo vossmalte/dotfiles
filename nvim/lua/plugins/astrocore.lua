@@ -63,7 +63,7 @@ return {
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
-        ["<Leader><Leader>"] = { function() Snacks.picker.resume() end, desc = "Open last Telescope" },
+        ["<Leader><Leader>"] = { function() require("snacks").picker.resume() end, desc = "Open last Telescope" },
         -- ["<Leader>ff"] = {
         --   function() require("telescope.builtin").find_files { hidden = true } end,
         --   desc = "Find files",
